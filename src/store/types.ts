@@ -12,11 +12,13 @@ export interface User {
   id: number;
 }
 
+export type UserType = User | null
+
 export type UsersData = User[] | null;
 
 export interface ContextType{
   articles: ArticlesData;
   setArticles: Dispatch<SetStateAction<ArticlesData>>;
-  users: UsersData;
-  setUsers: Dispatch<SetStateAction<UsersData>>
+  user: UserType;
+  setUser: Dispatch<SetStateAction<UserType>>
 }

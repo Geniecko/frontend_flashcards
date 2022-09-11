@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { StoreContext } from './StoreContext';
-import { ArticlesData, UsersData } from './types';
+import { ArticlesData, UserType } from './types';
 
 interface StoreProviderProps {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ interface StoreProviderProps {
 
 const StoreProvider: FC<StoreProviderProps> = ({ children }) => {
   const [articles, setArticles] = useState<ArticlesData>([]);
-  const [users, setUsers] = useState<UsersData>(null);
+  const [user, setUser] = useState<UserType>(null);
 
   const getArticles = async () => {
     const response = await fetch('data/articles.json');
@@ -28,8 +28,8 @@ const StoreProvider: FC<StoreProviderProps> = ({ children }) => {
       value={{
         articles,
         setArticles,
-        users,
-        setUsers,
+        user,
+        setUser,
       }}
     >
       {children}
