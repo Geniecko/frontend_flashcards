@@ -8,7 +8,8 @@ export interface Article {
 export type ArticlesData = Article[] | [];
 
 export interface User {
-  name: string;
+  login: string;
+  password: string;
   id: number;
 }
 

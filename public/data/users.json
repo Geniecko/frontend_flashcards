@@ -1,10 +1,12 @@
 [
   {
-    "name": "first user",
+    "login": "user1",
+    "password": "qwerty",
     "id": 1
   },
   {
-    "name": "second user",
+    "login": "user2",
+    "password": "asd",
     "id": 2
   }
 ]
