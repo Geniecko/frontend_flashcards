@@ -2,11 +2,25 @@
   {
     "login": "user1",
     "password": "qwerty",
-    "id": 1
+    "id": 1,
+    "articles": [
+      {
+        "title": "first article",
+        "author": "user1",
+        "id": 1
+      }
+    ]
   },
   {
     "login": "user2",
     "password": "asd",
-    "id": 2
+    "id": 2,
+    "articles": [
+      {
+        "title": "second article",
+        "author": "user2",
+        "id": 2
+      }
+    ]
   }
 ]

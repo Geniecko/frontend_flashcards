@@ -59,12 +59,12 @@ const LoginForm: FC<LoginFormProps> = ({ isModalOpen, handleOnClose }) => {
 
   useEffect(() => {
     resetState();
-  }, [])
+  }, [isModalOpen]);
 
   return (
     <Modal closeOnOutsideClick={true} isOpen={isModalOpen} handleOnClose={handleOnClose}>
       <Container>
-        <form onSubmit={handleOnSubmit} autoComplete='off'>
+        <form onSubmit={handleOnSubmit}>
           {validateMessageElement}
           <div>
             <label htmlFor='login'>
@@ -76,6 +76,7 @@ const LoginForm: FC<LoginFormProps> = ({ isModalOpen, handleOnClose }) => {
               <input
                 type='password'
                 name='password'
+                autoComplete='off'
                 value={password}
                 onChange={handleOnChangePassword}
               />

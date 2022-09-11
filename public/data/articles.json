@@ -1,10 +1,12 @@
 [
   {
-    "name": "first article",
+    "title": "first article",
+    "author": "user1",
     "id": 1
   },
   {
-    "name": "second article",
+    "title": "second article",
+    "author": "user2",
     "id": 2
   }
 ]

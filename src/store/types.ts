@@ -1,7 +1,8 @@
 import { Dispatch, SetStateAction } from 'react';
 
 export interface Article {
-  name: string;
+  title: string;
+  author: string;
   id: number;
 }
 
@@ -11,15 +12,16 @@ export interface User {
   login: string;
   password: string;
   id: number;
+  articles: ArticlesData;
 }
 
-export type UserType = User | null
+export type UserType = User | null;
 
 export type UsersData = User[] | null;
 
-export interface ContextType{
+export interface ContextType {
   articles: ArticlesData;
   setArticles: Dispatch<SetStateAction<ArticlesData>>;
   user: UserType;
-  setUser: Dispatch<SetStateAction<UserType>>
+  setUser: Dispatch<SetStateAction<UserType>>;
 }
