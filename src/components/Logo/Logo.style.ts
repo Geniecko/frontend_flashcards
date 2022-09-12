@@ -8,6 +8,7 @@ export const StyledLogo = styled.span`
   font-weight: 600;
   padding: 16px;
   white-space: none;
+  height: 100%;
 
   @media (min-width: 760px){
     font-size: 2.2rem;

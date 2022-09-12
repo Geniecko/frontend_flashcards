@@ -4,6 +4,12 @@ export const StyledHeader = styled.header`
   width: 100%;
   background-color: ${({ theme }) => theme.whitePrimary};
   box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 60px;
 `;
 
 export const Wrapper = styled.div`
@@ -12,6 +18,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   padding-right: 16px;
+  height: 100%;
 
   @media (min-width: 768px) {
     padding-right: 24px;
