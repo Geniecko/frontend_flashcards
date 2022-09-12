@@ -1,5 +1,6 @@
 export const ROUTES = {
   HOME: '/',
-  MY_ARTICLE: 'my-article',
+  ARTICLES: 'articles',
+  MY_ARTICLES: 'my-articles',
   ADD_ARTICLE: 'add-article',
 };
