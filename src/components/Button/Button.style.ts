@@ -8,6 +8,7 @@ export const Button = styled.button`
   min-width: 100px;
   cursor: pointer;
   transition: .2s ease-in-out;
+  white-space: none;
 
   @media (hover: hover) {
     &:hover{
