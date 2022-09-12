@@ -1,8 +1,12 @@
 import { FC, useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import { StoreContext } from '../../store/StoreContext';
-import { ROUTES } from '../../utils/RoutesConstants';
+
+import { Button } from '../Button/Button.style';
 import LoginForm from '../LoginForm/LoginForm';
+import Logo from '../Logo/Logo';
+import Navigation from '../Navigation/Navigation';
+import { StyledHeader, Wrapper, UserPanel, UserName } from './Header.style';
 
 const Header: FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,21 +22,22 @@ const Header: FC = () => {
     }
   };
 
-  const isAuth = context?.user !== null ? true : false;
+  const isAuth: boolean = context?.user !== null ? true : false;
   const setProperlyLabel = isAuth ? 'Log out' : 'Log in';
 
   return (
     <>
-      <header>
-        <Link to={`${ROUTES.HOME}`}>Home</Link>
-        {isAuth && <Link to={`${ROUTES.MY_ARTICLE}`}>My Articles</Link>}
-        {isAuth && <Link to={`${ROUTES.ADD_ARTICLE}`}>Add Article</Link>}
-        <div>
-          {isAuth && <span>{context?.user?.login}</span>}
-          <button onClick={handleOnClick}>{setProperlyLabel}</button>
-          <LoginForm handleOnClose={handleOnClose} isModalOpen={isModalOpen} />
-        </div>
-      </header>
+      <StyledHeader>
+        <Wrapper>
+          <Logo />
+          <Navigation isAuth={isAuth} />
+          <UserPanel>
+            {isAuth && <UserName>{context?.user?.login}</UserName>}
+            <Button onClick={handleOnClick}>{setProperlyLabel}</Button>
+            <LoginForm handleOnClose={handleOnClose} isModalOpen={isModalOpen} />
+          </UserPanel>
+        </Wrapper>
+      </StyledHeader>
     </>
   );
 };
