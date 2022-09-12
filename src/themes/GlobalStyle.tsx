@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
+    background-color: ${({theme}) => theme.whiteSecondary};
     color: ${({ theme }) => theme.secondary};
     font-weight: 400;
   }
@@ -78,6 +79,12 @@ const GlobalStyle = createGlobalStyle`
     line-height:1;
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
+
+    &:focus,
+    &:active,
+    &:hover{
+      outline: 0;
+    }
   }
 `;
 
