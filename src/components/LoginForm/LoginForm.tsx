@@ -1,8 +1,11 @@
 import { FC, FormEvent, MouseEvent, useContext, useEffect, useState } from 'react';
 import { StoreContext } from '../../store/StoreContext';
 import { UsersData } from '../../store/types';
+import { Button } from '../Button/Button.style';
+import Headline from '../Headline/Headline';
+import { Input } from '../Input/Input.style';
 import Modal from '../Modal/Modal';
-import { Container } from './LoginForm.style';
+import { Container, Form, Row, StyledButton } from './LoginForm.style';
 
 interface LoginFormProps {
   isModalOpen: boolean;
@@ -64,31 +67,33 @@ const LoginForm: FC<LoginFormProps> = ({ isModalOpen, handleOnClose }) => {
   return (
     <Modal closeOnOutsideClick={true} isOpen={isModalOpen} handleOnClose={handleOnClose}>
       <Container>
-        <form onSubmit={handleOnSubmit}>
+        <Headline title='Enter your login details'/>
+        <Form onSubmit={handleOnSubmit} autoComplete='off'>
           {validateMessageElement}
-          <div>
+          <Row>
             <label htmlFor='login'>
-              <input type='text' name='login' value={login} onChange={handleOnChangeLogin} />
-            </label>
-          </div>
-          <div>
+              Login: </label>
+              <Input type='text' name='login' value={login} onChange={handleOnChangeLogin} />
+          </Row>
+          <Row>
             <label htmlFor='password'>
-              <input
+              Password: </label>
+              <Input
                 type='password'
                 name='password'
                 autoComplete='off'
                 value={password}
                 onChange={handleOnChangePassword}
               />
-            </label>
-          </div>
-          <div>
-            <button type='submit'>Log in</button>
-            <button type='button' onClick={handleOnCloseModal}>
+           
+          </Row>
+          <Row>
+            <StyledButton as={Button} type='submit'>Log in</StyledButton>
+            <StyledButton as={Button} type='button' onClick={handleOnCloseModal}>
               Close
-            </button>
-          </div>
-        </form>
+            </StyledButton>
+          </Row>
+        </Form>
       </Container>
     </Modal>
   );
