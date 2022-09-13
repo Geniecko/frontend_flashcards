@@ -15,11 +15,11 @@ export const Form = styled.form`
 export const Row = styled.div`
   margin-bottom: 24px;
 
-  label{
+  label {
     margin-bottom: 8px;
   }
 
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
 `;

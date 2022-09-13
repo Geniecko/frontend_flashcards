@@ -67,28 +67,27 @@ const LoginForm: FC<LoginFormProps> = ({ isModalOpen, handleOnClose }) => {
   return (
     <Modal closeOnOutsideClick={true} isOpen={isModalOpen} handleOnClose={handleOnClose}>
       <Container>
-        <Headline title='Enter your login details'/>
+        <Headline title='Enter your login details' />
         <Form onSubmit={handleOnSubmit} autoComplete='off'>
           {validateMessageElement}
           <Row>
-            <label htmlFor='login'>
-              Login: </label>
-              <Input type='text' name='login' value={login} onChange={handleOnChangeLogin} />
+            <label htmlFor='login'>Login: </label>
+            <Input type='text' name='login' value={login} onChange={handleOnChangeLogin} />
           </Row>
           <Row>
-            <label htmlFor='password'>
-              Password: </label>
-              <Input
-                type='password'
-                name='password'
-                autoComplete='off'
-                value={password}
-                onChange={handleOnChangePassword}
-              />
-           
+            <label htmlFor='password'>Password: </label>
+            <Input
+              type='password'
+              name='password'
+              autoComplete='off'
+              value={password}
+              onChange={handleOnChangePassword}
+            />
           </Row>
           <Row>
-            <StyledButton as={Button} type='submit'>Log in</StyledButton>
+            <StyledButton as={Button} type='submit'>
+              Log in
+            </StyledButton>
             <StyledButton as={Button} type='button' onClick={handleOnCloseModal}>
               Close
             </StyledButton>
