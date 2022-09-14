@@ -23,7 +23,7 @@ const Header: FC = () => {
   };
 
   const isAuth: boolean = context?.user !== null ? true : false;
-  const setProperlyLabel = isAuth ? 'Log out' : 'Log in';
+  const setProperlyLabel = isAuth ? 'Wyloguj się' : 'Zaloguj się';
 
   return (
     <>

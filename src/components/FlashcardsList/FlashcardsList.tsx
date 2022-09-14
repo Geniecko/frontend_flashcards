@@ -10,7 +10,7 @@ const FlashcardsList: FC = () => {
     <FlashcardItem key={flashcard.id} flashcard={flashcard} />
   ));
 
-  return <List>{flashcardList === undefined ? <p>Not found</p> : flashcardList}</List>;
+  return <List>{flashcardList === undefined ? <p>Brak kart</p> : flashcardList}</List>;
 };
 
 export default FlashcardsList;

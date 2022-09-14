@@ -4,11 +4,11 @@ import ContainerTemplate from '../../templates/ContainerTemplate';
 
 const pageTitles = {
   latest: {
-    title: 'The latest flashcards',
+    title: 'Najnowsze fiszki',
     subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   random: {
-    title: 'Random flashcards',
+    title: 'Trzy losowe fiszki',
     subtitle:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy.',
   },

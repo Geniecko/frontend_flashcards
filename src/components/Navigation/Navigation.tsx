@@ -11,14 +11,14 @@ const Navigation: FC<NavigationProps> = ({ isAuth }) => {
   return (
     <StyledNavigation>
       <NavigationLink as={Link} to={`${ROUTES.HOME}`}>
-        Home
+        HOME
       </NavigationLink>
       <NavigationLink as={Link} to={`${ROUTES.FLASHCARDS}`}>
-        Flashcards
+        FISZKI
       </NavigationLink>
       {isAuth && (
         <NavigationLink as={Link} to={`${ROUTES.MY_FLASHCARDS}`}>
-          My Flashcards
+          TWOJE FISZKI
         </NavigationLink>
       )}
     </StyledNavigation>

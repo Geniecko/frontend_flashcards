@@ -28,7 +28,7 @@ const LoginForm: FC<LoginFormProps> = ({ isModalOpen, handleOnClose }) => {
     event.preventDefault();
 
     if (login.length === 0 || password.length === 0) {
-      setValidateMessage('Fill field');
+      setValidateMessage('Wypełnij brakujące pola');
       return;
     }
 
@@ -43,7 +43,7 @@ const LoginForm: FC<LoginFormProps> = ({ isModalOpen, handleOnClose }) => {
       resetState();
       handleOnClose();
     } else {
-      setValidateMessage('Invalid login or password');
+      setValidateMessage('Nieprawidłowe dane logowania');
     }
   };
 
@@ -67,7 +67,7 @@ const LoginForm: FC<LoginFormProps> = ({ isModalOpen, handleOnClose }) => {
   return (
     <Modal closeOnOutsideClick={true} isOpen={isModalOpen} handleOnClose={handleOnClose}>
       <Container>
-        <Headline title='Enter your login details' />
+        <Headline title='Zaloguj się na swoje konto' />
         <Form onSubmit={handleOnSubmit} autoComplete='off'>
           {validateMessageElement}
           <Row>
@@ -75,7 +75,7 @@ const LoginForm: FC<LoginFormProps> = ({ isModalOpen, handleOnClose }) => {
             <Input type='text' name='login' value={login} onChange={handleOnChangeLogin} />
           </Row>
           <Row>
-            <label htmlFor='password'>Password: </label>
+            <label htmlFor='password'>Hasło: </label>
             <Input
               type='password'
               name='password'
@@ -86,10 +86,10 @@ const LoginForm: FC<LoginFormProps> = ({ isModalOpen, handleOnClose }) => {
           </Row>
           <Row>
             <StyledButton as={Button} type='submit'>
-              Log in
+              Zaloguj się
             </StyledButton>
             <StyledButton as={Button} type='button' onClick={handleOnCloseModal}>
-              Close
+              Anuluj
             </StyledButton>
           </Row>
         </Form>

@@ -1,38 +1,38 @@
 [
   {
-    "question": "cos tam cos tam?",
-    "answer": "fwefwen fwfsdfs fwefwefc we",
-    "author": "user1",
+    "question": "string.substr()",
+    "answer": "Umożliwia pobranie fragmentu tekstu",
+    "author": "user",
     "id": 1
   },
   {
-    "question": "cos tam cos tam asd adwqd qqwe?",
-    "answer": "fwefefc we",
-    "author": "user2",
+    "question": "array.every()",
+    "answer": "Sprawdza, czy wszystkie elementy spełniają warunek",
+    "author": "user",
     "id": 2
   },
   {
-    "question": "cos tam cos tam?",
-    "answer": "fwefwen fwfsdfs fwefwefc we",
-    "author": "user1",
+    "question": "array.reverse()",
+    "answer": "Odwraca elementy w oryginalnej tablicy",
+    "author": "user",
     "id": 3
   },
   {
-    "question": "cos tam cos tam asd adwqd qqwe?",
-    "answer": "fwefefc we",
-    "author": "user2",
+    "question": "object.hasOwnProperty()",
+    "answer": "Sprwadza czy obiekt ma właściwość o podanej nazwie",
+    "author": "user",
     "id": 4
   },
   {
-    "question": "cos tam cos tam?",
-    "answer": "fwefwen fwfsdfs fwefwefc we",
-    "author": "user1",
+    "question": "array.unshift()",
+    "answer": "Dodaje elementy na początku tablicy",
+    "author": "user",
     "id": 5
   },
   {
-    "question": "cos tam cos tam asd adwqd qqwe?",
-    "answer": "fwefefc we",
-    "author": "user2",
+    "question": "array.pop()",
+    "answer": "Zwraca ostatni element i usuwa go",
+    "author": "user",
     "id": 6
   }
 ]

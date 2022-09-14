@@ -7,7 +7,7 @@ const Logo: FC = () => {
   return (
     <Link to={ROUTES.HOME}>
       <StyledLogo>
-        Frontend <span>FLASHCARDS</span>
+        Frontend <span>FISZKI</span>
       </StyledLogo>
     </Link>
   );

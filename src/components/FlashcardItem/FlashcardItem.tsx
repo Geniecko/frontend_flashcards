@@ -16,12 +16,12 @@ const FlashcardItem: FC<FlashcardItemProps> = ({ flashcard }) => {
   return (
     <Card onClick={handleClick}>
       <CardFront isReversed={isReversed}>
-        <Hint isReversed={isReversed}>Question</Hint>
+        <Hint isReversed={isReversed}>Przód</Hint>
         <Question>{flashcard.question}</Question>
         <Author isReversed={isReversed}>{flashcard.author}</Author>
       </CardFront>
       <CardBack isReversed={isReversed}>
-        <Hint isReversed={isReversed}>Answer</Hint>
+        <Hint isReversed={isReversed}>Tył</Hint>
         <Answer>{flashcard.answer}</Answer>
         <Author isReversed={isReversed}>{flashcard.author}</Author>
       </CardBack>

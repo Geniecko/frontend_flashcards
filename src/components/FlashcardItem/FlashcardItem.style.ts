@@ -52,7 +52,6 @@ export const CardBack = styled.div<CardProps>`
 
 export const Question = styled.p`
   font-size: 1.8rem;
-  text-transform: uppercase;
   font-weight: 600;
   color: ${({ theme }) => theme.whitePrimary};
 `;
