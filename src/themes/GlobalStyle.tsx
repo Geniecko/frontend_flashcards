@@ -15,11 +15,10 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
-    background-color: ${({ theme }) => theme.whitePrimary};
+    background-color: ${({ theme }) => theme.whiteSecondary};
     color: ${({ theme }) => theme.secondary};
     font-weight: 400;
-    padding-top: 80px;
-    min-height: 2000px;
+    padding-top: 75px;
   }
 
   h1, h2, h3, h4, h5{

@@ -3,8 +3,8 @@ import styled from 'styled-components/macro';
 export const StyledHeader = styled.header`
   width: 100%;
   background-color: ${({ theme }) => theme.whitePrimary};
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 16px;
   position: fixed;
+  height: 75px;
   top: 0;
   left: 0;
   right: 0;
