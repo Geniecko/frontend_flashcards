@@ -1,4 +1,4 @@
-## Simple Blog --- in progress
+## Flashcards--- in progress
 
 ### Technologies used
 
