@@ -7,7 +7,7 @@ interface RandomFlashcardsProps {
 }
 
 const RandomFlashcards: FC<RandomFlashcardsProps> = ({ flashcards }) => {
-  const [randomFlashcards, setRandomFlashcards] = useState<FlashcardsData | []>([]);
+  const [randomFlashcards, setRandomFlashcards] = useState<FlashcardsData>([]);
 
   const generateIndex = (length: number, numberOfFlashcards: number): number[] => {
     const allIndex = [];
@@ -44,7 +44,9 @@ const RandomFlashcards: FC<RandomFlashcardsProps> = ({ flashcards }) => {
   };
 
   useEffect(() => {
-    getRandomFlashcards();
+    if (flashcards.length > 0) {
+      getRandomFlashcards();
+    }
   }, [flashcards]);
 
   return <> {randomFlashcards.length > 0 && <FlashcardsList flashcards={randomFlashcards} />} </>;

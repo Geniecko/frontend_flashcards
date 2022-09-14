@@ -12,7 +12,7 @@ const FlashcardsView: FC = () => {
       <ContainerTemplate secondary>
         <Headline title='All flashcards' subtitle='Here are all the flashcards of our users' />
       </ContainerTemplate>
-      <ContainerTemplate>
+      <ContainerTemplate secondary>
         {context?.flashcards && <FlashcardsList flashcards={context.flashcards} />}
       </ContainerTemplate>
     </>

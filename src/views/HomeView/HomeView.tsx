@@ -1,5 +1,6 @@
 import { FC, useContext } from 'react';
 import Headline from '../../components/Headline/Headline';
+import LatestFlashcards from '../../components/LatestFlashcards/LatestFlashcards';
 import RandomFlashcards from '../../components/RandomFlashcards/RandomFlashcards';
 import { StoreContext } from '../../store/StoreContext';
 import ContainerTemplate from '../../templates/ContainerTemplate';
@@ -21,13 +22,16 @@ const Home: FC = () => {
 
   return (
     <>
-      <ContainerTemplate>
+      <ContainerTemplate secondary>
         <Headline title={pageTitles.latest.title} subtitle={pageTitles.latest.subtitle} />
       </ContainerTemplate>
       <ContainerTemplate secondary>
+        {context !== null ? <LatestFlashcards flashcards={context.flashcards} /> : 'Nie znaleziono'}
+      </ContainerTemplate>
+      <ContainerTemplate>
         <Headline title={pageTitles.random.title} subtitle={pageTitles.random.subtitle} />
       </ContainerTemplate>
-      <ContainerTemplate secondary>
+      <ContainerTemplate>
         {context !== null ? <RandomFlashcards flashcards={context.flashcards} /> : 'Nie znaleziono'}
       </ContainerTemplate>
     </>
