@@ -43,7 +43,7 @@ export const CardBack = styled.div<CardProps>`
   transform: ${({ isReversed }) =>
     isReversed ? 'perspective(1000px) rotateY(0deg)' : 'perspective(1000px) rotateY(180deg)'};
   transition: 1s;
-  background-color: ${({ theme }) => theme.whiteSecondary};
+  background-color: ${({ theme }) => theme.secondary};
 
   @media (min-width: 768px) {
     padding: 24px;
@@ -59,14 +59,15 @@ export const Question = styled.p`
 export const Answer = styled.p`
   font-size: 1.6rem;
   font-weight: 400;
-  color: ${({ theme }) => theme.secondary};
+  color: ${({ theme }) => theme.whitePrimary};
 `;
 
 export const Author = styled.span<CardProps>`
   position: absolute;
   text-transform: capitalize;
   font-size: 1.6rem;
-  color: ${({ theme, isReversed }) => (isReversed ? theme.secondary : theme.whiteSecondary)};
+  /* color: ${({ theme, isReversed }) => (isReversed ? theme.secondary : theme.whiteSecondary)}; */
+  color: ${({ theme }) => theme.whitePrimary};
   right: 16px;
   bottom: 16px;
   transition: color 1s ease-in-out;
@@ -80,7 +81,8 @@ export const Author = styled.span<CardProps>`
 export const Hint = styled.span<CardProps>`
   position: absolute;
   font-size: 1.6rem;
-  color: ${({ theme, isReversed }) => (isReversed ? theme.secondary : theme.whiteSecondary)};
+  /* color: ${({ theme, isReversed }) => (isReversed ? theme.secondary : theme.whiteSecondary)}; */
+  color: ${({ theme }) => theme.whitePrimary};
   left: 16px;
   top: 16px;
   font-weight: 600;

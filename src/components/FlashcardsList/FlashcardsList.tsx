@@ -1,12 +1,14 @@
-import { FC, useContext } from 'react';
-import { StoreContext } from '../../store/StoreContext';
+import { FC } from 'react';
+import { FlashcardsData } from '../../store/types';
 import FlashcardItem from '../FlashcardItem/FlashcardItem';
 import { List } from './FlashcardsList.style';
 
-const FlashcardsList: FC = () => {
-  const context = useContext(StoreContext);
+interface FlashcardsListProps {
+  flashcards: FlashcardsData;
+}
 
-  const flashcardList: JSX.Element[] | undefined = context?.flashcards.map((flashcard) => (
+const FlashcardsList: FC<FlashcardsListProps> = ({ flashcards }) => {
+  const flashcardList: JSX.Element[] = flashcards.map((flashcard) => (
     <FlashcardItem key={flashcard.id} flashcard={flashcard} />
   ));
 

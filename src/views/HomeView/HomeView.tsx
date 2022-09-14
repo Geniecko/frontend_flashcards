@@ -1,5 +1,7 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 import Headline from '../../components/Headline/Headline';
+import RandomFlashcards from '../../components/RandomFlashcards/RandomFlashcards';
+import { StoreContext } from '../../store/StoreContext';
 import ContainerTemplate from '../../templates/ContainerTemplate';
 
 const pageTitles = {
@@ -8,20 +10,25 @@ const pageTitles = {
     subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   random: {
-    title: 'Trzy losowe fiszki',
+    title: 'Losowe fiszki',
     subtitle:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy.',
   },
 };
 
 const Home: FC = () => {
+  const context = useContext(StoreContext);
+
   return (
     <>
       <ContainerTemplate>
         <Headline title={pageTitles.latest.title} subtitle={pageTitles.latest.subtitle} />
       </ContainerTemplate>
       <ContainerTemplate secondary>
-        <Headline title={pageTitles.latest.title} subtitle={pageTitles.latest.subtitle} />
+        <Headline title={pageTitles.random.title} subtitle={pageTitles.random.subtitle} />
+      </ContainerTemplate>
+      <ContainerTemplate secondary>
+        {context !== null ? <RandomFlashcards flashcards={context.flashcards} /> : 'Nie znaleziono'}
       </ContainerTemplate>
     </>
   );
