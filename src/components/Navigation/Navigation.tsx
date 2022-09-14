@@ -13,17 +13,12 @@ const Navigation: FC<NavigationProps> = ({ isAuth }) => {
       <NavigationLink as={Link} to={`${ROUTES.HOME}`}>
         Home
       </NavigationLink>
-      <NavigationLink as={Link} to={`${ROUTES.ARTICLES}`}>
-        Articles
+      <NavigationLink as={Link} to={`${ROUTES.FLASHCARDS}`}>
+        Flashcards
       </NavigationLink>
       {isAuth && (
-        <NavigationLink as={Link} to={`${ROUTES.MY_ARTICLES}`}>
-          My Articles
-        </NavigationLink>
-      )}
-      {isAuth && (
-        <NavigationLink as={Link} to={`${ROUTES.ADD_ARTICLE}`}>
-          Add Article
+        <NavigationLink as={Link} to={`${ROUTES.MY_FLASHCARDS}`}>
+          My Flashcards
         </NavigationLink>
       )}
     </StyledNavigation>

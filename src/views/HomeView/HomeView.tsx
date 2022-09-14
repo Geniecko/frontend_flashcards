@@ -4,14 +4,14 @@ import ContainerTemplate from '../../templates/ContainerTemplate';
 
 const pageTitles = {
   latest: {
-    title: 'The latest articles',
+    title: 'The latest flashcards',
     subtitle:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   random: {
-    title: 'Random Articles',
+    title: 'Random flashcards',
     subtitle:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy.',
   },
 };
 

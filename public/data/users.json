@@ -3,9 +3,10 @@
     "login": "user1",
     "password": "qwerty",
     "id": 1,
-    "articles": [
+    "flashcards": [
       {
-        "title": "first article",
+        "question": "cos tam cos tam asd adwqd qqwe?",
+        "answer": "fwefefc we",
         "author": "user1",
         "id": 1
       }
@@ -15,9 +16,10 @@
     "login": "user2",
     "password": "asd",
     "id": 2,
-    "articles": [
+    "flashcards": [
       {
-        "title": "second article",
+        "question": "cos tam cos tam asd adwqd qqwe?",
+        "answer": "fwefefc we",
         "author": "user2",
         "id": 2
       }

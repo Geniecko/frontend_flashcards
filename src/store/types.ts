@@ -1,18 +1,19 @@
 import { Dispatch, SetStateAction } from 'react';
 
-export interface Article {
-  title: string;
+export interface Flashcard {
+  question: string;
+  answer: string;
   author: string;
   id: number;
 }
 
-export type ArticlesData = Article[] | [];
+export type FlashcardsData = Flashcard[] | [];
 
 export interface User {
   login: string;
   password: string;
   id: number;
-  articles: ArticlesData;
+  flashcards: FlashcardsData;
 }
 
 export type UserType = User | null;
@@ -20,8 +21,8 @@ export type UserType = User | null;
 export type UsersData = User[] | null;
 
 export interface ContextType {
-  articles: ArticlesData;
-  setArticles: Dispatch<SetStateAction<ArticlesData>>;
+  flashcards: FlashcardsData;
+  setFlashcards: Dispatch<SetStateAction<FlashcardsData>>;
   user: UserType;
   setUser: Dispatch<SetStateAction<UserType>>;
 }

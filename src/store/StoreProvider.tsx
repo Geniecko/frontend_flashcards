@@ -1,33 +1,33 @@
 import { FC, useEffect, useState } from 'react';
 import { StoreContext } from './StoreContext';
-import { ArticlesData, UserType } from './types';
+import { FlashcardsData, UserType } from './types';
 
 interface StoreProviderProps {
   children: React.ReactNode;
 }
 
 const StoreProvider: FC<StoreProviderProps> = ({ children }) => {
-  const [articles, setArticles] = useState<ArticlesData>([]);
+  const [flashcards, setFlashcards] = useState<FlashcardsData>([]);
   const [user, setUser] = useState<UserType>(null);
 
-  const getArticles = async () => {
-    const response = await fetch('data/articles.json');
+  const getFlashcards = async () => {
+    const response = await fetch('data/flashcards.json');
 
-    const articles = await response.json();
-    if (articles.length > 0) {
-      setArticles(articles);
+    const flashcards = await response.json();
+    if (flashcards.length > 0) {
+      setFlashcards(flashcards);
     }
   };
 
   useEffect(() => {
-    getArticles();
+    getFlashcards();
   }, []);
 
   return (
     <StoreContext.Provider
       value={{
-        articles,
-        setArticles,
+        flashcards,
+        setFlashcards,
         user,
         setUser,
       }}

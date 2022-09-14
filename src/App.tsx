@@ -6,10 +6,9 @@ import StoreProvider from './store/StoreProvider';
 import MainTemplate from './templates/MainTemplate';
 import PrivateRoutes from './utils/PrivateRoutes';
 import { ROUTES } from './utils/RoutesConstants';
-import AddArticleView from './views/AddArticleView/AddArticleView';
-import ArticlesView from './views/ArticlesView/ArticlesView';
+import FlashcardsView from './views/FlashcardsView/FlashcardsView';
 import HomeView from './views/HomeView/HomeView';
-import MyArticlesView from './views/MyArticlesView/MyArticlesView';
+import MyFlashcardsView from './views/MyFlashcardsView/MyFlashcardsView';
 import NoMatchView from './views/NoMatchView/NoMatchView';
 
 const App: FC = () => {
@@ -21,10 +20,9 @@ const App: FC = () => {
           <Routes>
             <Route index element={<HomeView />} />
             <Route path={`${ROUTES.HOME}`} element={<HomeView />} />
-            <Route path={`${ROUTES.ARTICLES}`} element={<ArticlesView />} />
+            <Route path={`${ROUTES.FLASHCARDS}`} element={<FlashcardsView />} />
             <Route element={<PrivateRoutes />}>
-              <Route path={`${ROUTES.MY_ARTICLES}`} element={<MyArticlesView />} />
-              <Route path={`${ROUTES.ADD_ARTICLE}`} element={<AddArticleView />} />
+              <Route path={`${ROUTES.MY_FLASHCARDS}`} element={<MyFlashcardsView />} />
             </Route>
             <Route path='*' element={<NoMatchView />} />
           </Routes>
