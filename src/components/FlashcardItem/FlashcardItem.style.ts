@@ -5,9 +5,22 @@ interface CardProps {
 }
 
 export const Card = styled.div`
-  min-height: 300px;
+  min-height: 350px;
   position: relative;
   cursor: pointer;
+  min-height: 450px;
+
+  @media (min-width: 576px){
+    min-height: 350px
+  }
+
+  @media (min-width: 768px){
+    min-height: 425px
+  }
+
+  @media (min-width: 996px){
+    min-height: 350px
+  }
 `;
 
 export const CardFront = styled.div<CardProps>`
@@ -23,6 +36,7 @@ export const CardFront = styled.div<CardProps>`
     isReversed ? 'perspective(1000px) rotateY(-180deg)' : 'perspective(1000px) rotateY(0deg)'};
   transition: 1s;
   background-color: ${({ theme }) => theme.primary};
+  overflow: hidden;
 
   @media (min-width: 768px) {
     padding: 24px;
@@ -55,6 +69,7 @@ export const Question = styled.p`
   font-weight: 600;
   color: ${({ theme }) => theme.whitePrimary};
   text-align: center;
+  margin: 16px 8px;
 `;
 
 export const Answer = styled.p`
@@ -62,6 +77,7 @@ export const Answer = styled.p`
   font-weight: 400;
   color: ${({ theme }) => theme.whitePrimary};
   text-align: center;
+  margin: 16px 8px;
 `;
 
 export const Author = styled.span<CardProps>`
@@ -73,7 +89,7 @@ export const Author = styled.span<CardProps>`
   right: 16px;
   bottom: 16px;
   transition: color 1s ease-in-out;
-
+  
   @media (min-width: 768px) {
     right: 24px;
     bottom: 24px;
