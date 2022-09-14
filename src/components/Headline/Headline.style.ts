@@ -6,10 +6,10 @@ export const StyledHeadline = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
-  h2{
+
+  h2 {
     font-weight: 700;
-    color: ${({theme}) => theme.primary};
+    color: ${({ theme }) => theme.primary};
     font-size: 2.8rem;
   }
 

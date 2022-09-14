@@ -5,8 +5,7 @@ import ContainerTemplate from '../../templates/ContainerTemplate';
 const pageTitles = {
   latest: {
     title: 'The latest flashcards',
-    subtitle:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   random: {
     title: 'Random flashcards',

@@ -10,11 +10,11 @@ export const StyledLogo = styled.span`
   white-space: none;
   height: 100%;
 
-span{
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 400;
-}
+  span {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
 
   @media (min-width: 760px) {
     font-size: 2.2rem;

@@ -15,7 +15,8 @@ const ContainerTemplate: FC<ContainerTemplateProps> = ({ children, secondary }) 
 const StyledContainerTemplate = styled.div<ContainerTemplateProps>`
   width: 100%;
   padding: 36px 16px;
-  background-color: ${({ theme, secondary }) => (secondary ? theme.whiteSecondary : theme.whitePrimary)};
+  background-color: ${({ theme, secondary }) =>
+    secondary ? theme.whiteSecondary : theme.whitePrimary};
 
   @media (min-width: 768px) {
     padding: 48px 24px;
