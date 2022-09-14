@@ -11,7 +11,7 @@ const LatestFlashcards: FC<LatestFlashcardsProps> = ({ flashcards }) => {
 
   const getLatestFlashcards = () => {
     const latestFlashcardsArray = [];
-    let numberOfFlushcards = 4;
+    let numberOfFlushcards = 2;
     let index = flashcards.length - 1;
 
     if (flashcards.length > 0) {

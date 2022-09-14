@@ -54,12 +54,14 @@ export const Question = styled.p`
   font-size: 1.8rem;
   font-weight: 600;
   color: ${({ theme }) => theme.whitePrimary};
+  text-align: center;
 `;
 
 export const Answer = styled.p`
   font-size: 1.6rem;
   font-weight: 400;
   color: ${({ theme }) => theme.whitePrimary};
+  text-align: center;
 `;
 
 export const Author = styled.span<CardProps>`
