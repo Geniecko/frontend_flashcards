@@ -17,6 +17,6 @@ export const NavigationLink = styled.a`
   }
 
   &:hover {
-    color: ${({ theme }) => theme.gray};
+    color: ${({ theme }) => theme.primary};
   }
 `;

@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.whitePrimary};
     color: ${({ theme }) => theme.secondary};
     font-weight: 400;
-    padding-top: 60px;
+    padding-top: 80px;
     min-height: 2000px;
   }
 

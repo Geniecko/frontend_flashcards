@@ -9,7 +9,6 @@ export const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 100;
-  height: 60px;
 `;
 
 export const Wrapper = styled.div`

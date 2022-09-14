@@ -1,4 +1,4 @@
-## Flashcards--- in progress
+## Frontend Flashcards - In progress
 
 ### Technologies used
 
