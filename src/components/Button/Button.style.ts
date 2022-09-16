@@ -1,14 +1,19 @@
 import styled from 'styled-components/macro';
 
-export const Button = styled.button`
+interface ButtonProps {
+  small?: boolean;
+}
+
+export const Button = styled.button<ButtonProps>`
   background-color: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.whitePrimary};
   font-weight: 500;
-  padding: 8px 20px;
-  min-width: 100px;
+  padding: ${({ small }) => small ? '6px 12px' : ' 8px 20px'};
+  min-width:  ${({ small }) => small ? 'unset' : ' 100px'};
   cursor: pointer;
   transition: 0.2s ease-in-out;
   white-space: none;
+  font-size: ${({ small }) => small && '1.4rem'};
 
   @media (hover: hover) {
     &:hover {
