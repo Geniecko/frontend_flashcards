@@ -10,7 +10,11 @@ interface NavigationProps {
 const Navigation: FC<NavigationProps> = ({ isAuth }) => {
   return (
     <StyledNavigation>
-      <NavigationLink className={({isActive}) => isActive ? 'active' : ''} as={NavLink} to={`${ROUTES.HOME}`}>
+      <NavigationLink
+        className={({ isActive }) => (isActive ? 'active' : '')}
+        as={NavLink}
+        to={`${ROUTES.HOME}`}
+      >
         HOME
       </NavigationLink>
       <NavigationLink as={NavLink} to={`${ROUTES.FLASHCARDS}`}>

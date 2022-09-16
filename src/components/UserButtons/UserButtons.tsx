@@ -3,11 +3,12 @@ import { StoreContext } from '../../store/StoreContext';
 import { Button } from '../Button/Button.style';
 import { UserButton } from './UserButtons.style';
 
-interface UsetButtonsProps{
-  id:number;
+interface UsetButtonsProps {
+  id: number;
+  openModal: () => void;
 }
 
-const UserButtons: FC<UsetButtonsProps> = ({id}) => {
+const UserButtons: FC<UsetButtonsProps> = ({ id, openModal }) => {
   const context = useContext(StoreContext);
 
   const removeCard = (event: MouseEvent<HTMLButtonElement>) => {
@@ -18,9 +19,16 @@ const UserButtons: FC<UsetButtonsProps> = ({id}) => {
     );
   };
 
+  const editCard = (event: MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    openModal();
+  };
+
   return (
     <UserButton>
-      <Button small>Edytuj</Button>
+      <Button small onClick={editCard} data-card={id}>
+        Edytuj
+      </Button>
       <Button small onClick={removeCard} data-card={id}>
         Usuń
       </Button>

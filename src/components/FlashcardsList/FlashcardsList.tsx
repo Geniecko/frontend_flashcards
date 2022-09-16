@@ -5,7 +5,7 @@ import { List } from './FlashcardsList.style';
 
 interface FlashcardsListProps {
   flashcards: FlashcardsData;
-  isUserCard?: boolean
+  isUserCard?: boolean;
 }
 
 const FlashcardsList: FC<FlashcardsListProps> = ({ flashcards, isUserCard }) => {
