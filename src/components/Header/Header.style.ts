@@ -38,6 +38,7 @@ export const UserPanel = styled.div`
 export const UserName = styled.span`
   font-size: 1.8rem;
   font-weight: 600;
+  text-transform: capitalize;
   color: ${({ theme }) => theme.primary};
   display: block;
 `;

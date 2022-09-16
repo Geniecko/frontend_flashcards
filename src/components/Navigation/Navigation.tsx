@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { ROUTES } from '../../utils/RoutesConstants';
 import { NavigationLink, StyledNavigation } from './Navigation.style';
 
@@ -10,14 +10,14 @@ interface NavigationProps {
 const Navigation: FC<NavigationProps> = ({ isAuth }) => {
   return (
     <StyledNavigation>
-      <NavigationLink as={Link} to={`${ROUTES.HOME}`}>
+      <NavigationLink className={({isActive}) => isActive ? 'active' : ''} as={NavLink} to={`${ROUTES.HOME}`}>
         HOME
       </NavigationLink>
-      <NavigationLink as={Link} to={`${ROUTES.FLASHCARDS}`}>
+      <NavigationLink as={NavLink} to={`${ROUTES.FLASHCARDS}`}>
         FISZKI
       </NavigationLink>
       {isAuth && (
-        <NavigationLink as={Link} to={`${ROUTES.MY_FLASHCARDS}`}>
+        <NavigationLink as={NavLink} to={`${ROUTES.MY_FLASHCARDS}`}>
           TWOJE FISZKI
         </NavigationLink>
       )}
