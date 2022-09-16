@@ -34,5 +34,11 @@
     "answer": "Zwraca ostatni element i usuwa go",
     "author": "user",
     "id": 6 
+  },
+  {
+    "question": "Co to są komponenty wyższego rzędu?",
+    "answer": "Komponenty wyższego rzędu (ang. Higher Order Component - HOC), zasada jest podobna do funkcji wyższego rzędu. Komponenty tego typu do funkcje, które przyjmują komponenty jako argument oraz zwracają nowy argument. Przykładem może być funkcja connect z biblioteki Redux.",
+    "author": "john",
+    "id": 7 
   }
 ]
