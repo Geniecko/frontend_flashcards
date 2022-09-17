@@ -1,8 +1,6 @@
 import { FC, useState } from 'react';
 import { Flashcard } from '../../store/types';
-import EditForm from '../EditForm/EditForm';
-
-import UserButtons from '../UserButtons/UserButtons';
+import DeleteButton from '../UserButtons/DeleteButton';
 import { Author, Card, Answer, Question, Hint, CardFront, CardBack } from './FlashcardItem.style';
 
 interface FlashcardItemProps {
@@ -12,17 +10,12 @@ interface FlashcardItemProps {
 
 const FlashcardItem: FC<FlashcardItemProps> = ({ flashcard, isUserCard }) => {
   const [isReversed, setIsReversed] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOnClose = () => setIsModalOpen(false);
 
   const handleClick = () => {
     setIsReversed((prevValue) => !prevValue);
   };
 
-  const userButtons = isUserCard && (
-    <UserButtons id={flashcard.id} openModal={() => setIsModalOpen(true)} />
-  );
+  const userDeleteButton = isUserCard && <DeleteButton id={flashcard.id} />;
 
   return (
     <>
@@ -31,18 +24,15 @@ const FlashcardItem: FC<FlashcardItemProps> = ({ flashcard, isUserCard }) => {
           <Hint isReversed={isReversed}>Przód</Hint>
           <Question>{flashcard.question}</Question>
           <Author isReversed={isReversed}>{flashcard.author}</Author>
-          {userButtons}
+          {userDeleteButton}
         </CardFront>
         <CardBack isReversed={isReversed} onClick={handleClick}>
           <Hint isReversed={isReversed}>Tył</Hint>
           <Answer>{flashcard.answer}</Answer>
           <Author isReversed={isReversed}>{flashcard.author}</Author>
-          {userButtons}
+          {userDeleteButton}
         </CardBack>
       </Card>
-      {isUserCard && (
-        <EditForm isModalOpen={isModalOpen} handleOnClose={handleOnClose} id={flashcard.id} />
-      )}
     </>
   );
 };
