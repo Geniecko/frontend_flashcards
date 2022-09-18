@@ -1,9 +1,8 @@
 import styled from 'styled-components/macro';
 
 export const Textarea = styled.textarea`
-  background-color: ${({ theme }) => theme.whiteSecondary};
-  border: 2px solid ${({ theme }) => theme.secondary};
-  border-radius: 8px;
+  background-color: ${({ theme }) => theme.whitePrimary};
+  border: 2px solid ${({ theme }) => theme.primary};
   padding: 8px 12px;
   font-size: 1.6rem;
   font-weight: 400;

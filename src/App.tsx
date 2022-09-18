@@ -6,6 +6,7 @@ import StoreProvider from './store/StoreProvider';
 import MainTemplate from './templates/MainTemplate';
 import PrivateRoutes from './utils/PrivateRoutes';
 import { ROUTES } from './utils/RoutesConstants';
+import AddFlashcardView from './views/AddFlashcardView/AddFlashcardView';
 import FlashcardsView from './views/FlashcardsView/FlashcardsView';
 import HomeView from './views/HomeView/HomeView';
 import MyFlashcardsView from './views/MyFlashcardsView/MyFlashcardsView';
@@ -23,6 +24,7 @@ const App: FC = () => {
             <Route path={`${ROUTES.FLASHCARDS}`} element={<FlashcardsView />} />
             <Route element={<PrivateRoutes />}>
               <Route path={`${ROUTES.MY_FLASHCARDS}`} element={<MyFlashcardsView />} />
+              <Route path={`${ROUTES.ADD_FLASHCARD}`} element={<AddFlashcardView />} />
             </Route>
             <Route path='*' element={<NoMatchView />} />
           </Routes>

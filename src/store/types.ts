@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from 'react';
 export interface Flashcard {
   question: string;
   answer: string;
-  author: string;
+  author: string | undefined;
   id: number;
 }
 

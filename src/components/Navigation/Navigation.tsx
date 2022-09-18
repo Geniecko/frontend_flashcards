@@ -25,6 +25,11 @@ const Navigation: FC<NavigationProps> = ({ isAuth }) => {
           TWOJE FISZKI
         </NavigationLink>
       )}
+      {isAuth && (
+        <NavigationLink as={NavLink} to={`${ROUTES.ADD_FLASHCARD}`}>
+          DODAJ FISZKE
+        </NavigationLink>
+      )}
     </StyledNavigation>
   );
 };
