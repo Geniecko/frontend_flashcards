@@ -1,12 +1,12 @@
 [
   {
     "login": "user",
-    "password": "qwerty",
+    "password": "userpass",
     "id": 1
   },
   {
     "login": "john",
-    "password": "haslo",
+    "password": "johnpass",
     "id": 2
   }
 ]
