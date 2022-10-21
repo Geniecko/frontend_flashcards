@@ -18,7 +18,19 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.whiteSecondary};
     color: ${({ theme }) => theme.secondary};
     font-weight: 400;
-    padding-top: 75px;
+    padding-top: 150px;
+
+    @media (min-width: 576px) {
+      padding-top: 121px;
+    }
+
+    @media (min-width: 768px) {
+      padding-top: 128px;
+    }
+
+    @media (min-width: 992px) {
+      padding-top: 75px;
+    } 
   }
 
   h1, h2, h3, h4, h5{

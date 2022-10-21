@@ -1,4 +1,4 @@
-## Frontend Flashcards - In progress
+## Frontend Flashcards
 
 ## Sample user login details
 

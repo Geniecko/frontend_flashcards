@@ -12,8 +12,12 @@ export const Button = styled.button<ButtonProps>`
   min-width: ${({ small }) => (small ? 'unset' : ' 100px')};
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  white-space: none;
-  font-size: ${({ small }) => small && '1.4rem'};
+  white-space: nowrap;
+  font-size: ${({ small }) => small ? '1.2rem' : '1.4rem'};
+
+  @media (min-width: 576px) {
+    font-size: ${({ small }) => small ? '1.4rem' : '1.6rem'};
+  }
 
   @media (hover: hover) {
     &:hover {
