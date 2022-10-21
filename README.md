@@ -22,4 +22,4 @@ To run this project, install it locally using npm:
 - Run ```npm install``` to install packages
 - Run ```npm run build``` to build app production or run ```npm start``` for development
 
-#### Live: https://frontend-flashcard.netlify.app
+#### Live: https://frontend-flashcard.netlify.app/
