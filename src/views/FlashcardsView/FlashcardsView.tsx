@@ -10,7 +10,7 @@ const FlashcardsView: FC = () => {
   return (
     <>
       <ContainerTemplate secondary>
-        <Headline title='All flashcards' subtitle='Here are all the flashcards of our users' />
+        <Headline title='Wszystkie fiszki' subtitle='Tutaj znajdują się wszystkie fiszki naszych użytkowników.' />
       </ContainerTemplate>
       <ContainerTemplate secondary>
         {context?.flashcards && <FlashcardsList flashcards={context.flashcards} />}

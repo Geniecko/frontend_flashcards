@@ -8,12 +8,12 @@ import ContainerTemplate from '../../templates/ContainerTemplate';
 const pageTitles = {
   latest: {
     title: 'Najnowsze fiszki',
-    subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    subtitle: 'Tutaj znajdziesz najnowsze fiszki naszych użytkowników.',
   },
   random: {
     title: 'Losowe fiszki',
     subtitle:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy.',
+      'Tutaj znajdziesz losowe fiszki naszych użytkowników.',
   },
 };
 
